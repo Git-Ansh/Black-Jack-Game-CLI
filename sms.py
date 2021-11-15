@@ -11,7 +11,7 @@ import sys
 from prompt_toolkit import prompt
 from prompt_toolkit.filters import Condition
 from prompt_toolkit.key_binding import KeyBindings
-db = m.connect(host="localhost", user="root", passwd="Anshshah2003")
+db = m.connect(host="localhost", user="root", passwd="")
 c = db.cursor(buffered=True)
 c.execute("create database if not exists blackjack")
 c.execute("use blackjack")
@@ -39,7 +39,7 @@ def verify():
     msg = otp
     s = smtplib.SMTP('smtp.gmail.com', 587)
     s.starttls()
-    s.login("blackjack.client@gmail.com", "exynwbhdifirbtgi")
+    s.login("example.email@gmail.com", "Your AppPassword")
     while True:
         emailid = em[0]
         s.sendmail('&&&&&&&&&&&', emailid, msg)
